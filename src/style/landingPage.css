@@ -1,0 +1,90 @@
+.myBg {
+  height: 130vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/img/bg1.png");
+  background-size: cover;
+}
+.NavLogo {
+  margin-right: 300px;
+}
+
+.navlink {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 22px;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.rect2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 660px;
+  height: 250px;
+  left: 500px;
+  top: 280px;
+  background: #ffffff;
+  border: 1px solid white;
+  box-shadow: -3px -4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.playText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 190px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #345995;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.pointerHand {
+  position: absolute;
+  width: 512px;
+  height: 423px;
+  left: 590px;
+  top: 500px;
+}
+
+.rect2:hover {
+  color: white;
+  background-color: #345995;
+  border: none;
+  transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
+  -ms-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+}
+
+.playButtonGroup:hover .pointerHand {
+  top: 450px;
+  transition: ease-in-out 0.5s;
+}
+
+.HomeLeaderboard {
+  position: absolute;
+  width: 100%;
+  height: 857px;
+  margin-top: -50px;
+  top: 888px;
+  background: #ffffff;
+  border-radius: 70px;
+  z-index:99;
+}
