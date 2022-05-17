@@ -5,7 +5,7 @@ import {Container} from 'react-bootstrap'
 const PlayButtonGroup = () => {
   return (
     <Container>
-          <div className="playButtonGroup">
+          <div className="playButtonGroup d-flex justify-content-center">
             <button type="button" className='rect2 playText'>
               PLAY
             </button>
