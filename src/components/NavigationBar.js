@@ -5,7 +5,7 @@ const NavigationBar = () => {
   return(
       <Container>
         <Nav className="NavigationBar justify-content-center ">
-          <Nav.Link className="text-center text-white navlink">Home</Nav.Link>
+          <Nav.Link className="text-center text-white navlink" href="/">Home</Nav.Link>
           <Nav.Link className="text-center text-white navlink">Leaderboard</Nav.Link>
           <Nav.Link>
             <img
@@ -16,7 +16,7 @@ const NavigationBar = () => {
             />
           </Nav.Link>
           <Navbar.Text className="navlink" >CoinShop</Navbar.Text>
-          <Nav.Link className="text-center text-white navlink">Login/Register</Nav.Link>
+          <Nav.Link className="text-center text-white navlink" href="/login">Login/Register</Nav.Link>
         </Nav>
       </Container>
   )
