@@ -16,7 +16,7 @@ const PlayButtonGroup = () => {
               alt="Pointer Hand"
               />
           </div>
-        </Container>
+    </Container>
   );
 }
 

@@ -2,6 +2,7 @@ import './style/landingPage.css'
 import NavigationBar from './components/NavigationBar'
 import PlayButtonGroup from './components/PlayButtonGroup'
 import HomeLeaderboard from './components/HomeLeaderboard'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <PlayButtonGroup />
       </div>
       <HomeLeaderboard />
+      
     </div>
   );
 }
