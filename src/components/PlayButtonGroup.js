@@ -1,9 +1,6 @@
 import hand from '../assets/img/handPointer.png'
 import {Container} from 'react-bootstrap'
-<<<<<<< HEAD
 import Image from 'react-bootstrap/Image'
-=======
->>>>>>> 805420f630bf27e0a2b7d4bfe1b4344a39e1efa2
 
 
 const PlayButtonGroup = () => {
@@ -13,7 +10,6 @@ const PlayButtonGroup = () => {
             <button type="button" className='rect2 playText'>
               PLAY
             </button>
-<<<<<<< HEAD
             <Image
               src={hand}
               height="100"
@@ -22,7 +18,6 @@ const PlayButtonGroup = () => {
               />
           </div>
     </Container>
-=======
             <img
               src={hand}
               height="100"
@@ -31,7 +26,7 @@ const PlayButtonGroup = () => {
               />
           </div>
         </Container>
->>>>>>> 805420f630bf27e0a2b7d4bfe1b4344a39e1efa2
+    </Container>
   );
 }
 

@@ -1,9 +1,6 @@
 .myBg {
-<<<<<<< HEAD
   height: 100vh;
-=======
   height: 130vh;
->>>>>>> 805420f630bf27e0a2b7d4bfe1b4344a39e1efa2
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/img/bg1.png");
   background-size: cover;
@@ -80,8 +77,6 @@
   transition: ease-in-out 0.5s;
 }
 
-<<<<<<< HEAD
-=======
 .HomeLeaderboard {
   position: absolute;
   width: 100%;
@@ -90,9 +85,7 @@
   top: 888px;
   background: #ffffff;
   border-radius: 70px;
-  z-index:99;
 }
->>>>>>> 805420f630bf27e0a2b7d4bfe1b4344a39e1efa2
 
 .form {
   font-family: "Inter";
@@ -119,7 +112,6 @@
   text-align: left;
   letter-spacing: 0.1em;
   color: #ffffff;
-<<<<<<< HEAD
 }
 
 
@@ -162,6 +154,3 @@
   height: 25px;
   background-color: #131314;
   top:260px;
-=======
->>>>>>> 805420f630bf27e0a2b7d4bfe1b4344a39e1efa2
-}
