@@ -1,0 +1,5 @@
+.leadeboard {
+    display: flex;
+    justify-content:baseline;
+    text-align: center;
+}

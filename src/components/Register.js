@@ -3,32 +3,46 @@ import React ,{useState} from 'react'
 import axios, { Axios } from 'axios'
 
 function Register() {
-    const [username, setUsername]=useState("")
-    const [password, setPassword]=useState("")
-
-    const signUp = (e) => {
+    const [state, setState] = useState({
+        username: "",
+        password: ""
+      });
+    
+      const handleChange = (e) => {
+        const value = e.target.value;
+        setState({
+          ...state,
+          [e.target.name]: value
+        });
+      };
+    
+      const handleSubmit = (e) => {
         e.preventDefault();
-        Axios.post("https://liquiz-backend.herokuapp.com/api/register", {
-            username,
-            password
-        }).then(res => console.log(res)).catch(err => console.log(err))
-    }
+        const userData = {
+          username: state.username,
+          password: state.password
+        };
+        axios.post("https://liquiz-backend.herokuapp.com/api/register", userData).then((response) => {
+          console.log(response.status);
+          console.log(response.data);
+        });
+      };
 
     return (
         <div className='form'>
             <h1>DAFTAR</h1>
-            <Form>
-                <Form.Group className="mb-3" value={username}
-                onChange={(e)=>setUsername(e.target.value)}>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" value={state.username}
+                onChange={handleChange}>
                     <Form.Control type="text" placeholder="Masukkan Username" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword" value={username}
-                onChange={(e)=>setPassword(e.target.value)}>
+                <Form.Group className="mb-3" controlId="formBasicPassword" value={state.password}
+                onChange={handleChange}>
                     <Form.Control type="password" placeholder="Masukkan Password" />
                 </Form.Group>
                 <div className='option'>Sudah punya akun? Masuk <a href='/login'>disini.</a></div>
-                <Button onClick={signUp} variant="primary" type="submit">
+                <Button onClick={Register} variant="primary" type="submit">
                     Daftar
                 </Button>
             </Form>
