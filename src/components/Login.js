@@ -3,29 +3,22 @@ import React ,{useState} from 'react'
 import axios, { Axios } from 'axios'
 
 function Login() {
-    const [data, setData] = useState({
-        username: "",
-        password: ""
-      });
+    const [user, setUser] = useState({});
     
-      const handleChange = (e) => {
-        const value = e.target.value;
-        setData({
-          ...data,
-          [e.target.name]: value
-        });
-      };
+     const handleChange = (e) => {
+        const newUser = {...user};
+        newUser[e.target.name] = e.target.value;
+        setUser(newUser);
+      }; 
     
       const handleSubmit = (e) => {
         e.preventDefault();
-        const userData = JSON.stringify({
-          username: "ngetes",
-          password: "lalala"
-        });
-        axios.post("https://liquiz-backend.herokuapp.com/api/login", userData, {
-            headers: { 'Content-Type': 'application/json' },
-            withCredentials: true
-        }).then((response) => {
+        const userData = {
+          username: user.username,
+          password: user.password
+        };
+        axios.post("https://liquiz-backend.herokuapp.com/api/login", userData)
+        .then((response) => {
           console.log(response.status);
           console.log(response.data.token);
         })
@@ -45,12 +38,12 @@ function Login() {
         <div className='form'>
             <h1>MASUK</h1>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" onChange={handleChange} value={data.username}>
-                    <Form.Control type="text" placeholder="Masukkan Username" />
+                <Form.Group className="mb-3" onChange={handleChange} value={user.username}>
+                    <Form.Control name="username" type="text" placeholder="Masukkan Username" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword" onChange={handleChange} value={data.password}>
-                    <Form.Control type="password" placeholder="Masukkan Password" />
+                <Form.Group className="mb-3" controlId="formBasicPassword" onChange={handleChange} value={user.password}>
+                    <Form.Control name="password" type="password" placeholder="Masukkan Password" />
                 </Form.Group>
                 <div className='option'>Belum punya akun? Daftar <a href='/register'>disini.</a></div>
                 <Button variant="primary" type="submit" onClick={Login}>Masuk</Button>
