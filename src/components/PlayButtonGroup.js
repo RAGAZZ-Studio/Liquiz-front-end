@@ -6,9 +6,7 @@ const PlayButtonGroup = () => {
   return (
     <Container>
           <div className="playButtonGroup d-flex justify-content-center">
-            <button type="button" className='rect2 playText'>
-              PLAY
-            </button>
+            <button type="button" className='rect2 playText'>PLAY</button>
             <img
               src={hand}
               height="100"
