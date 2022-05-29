@@ -23,7 +23,7 @@ const PlayButtonGroup = () => {
               height="100"
               className="d-inline-block align-top rounded mx-auto d-block pointerHand"
               alt="Pointer Hand"
-              />
+              >
           </div>
         </Container>
     </Container>
