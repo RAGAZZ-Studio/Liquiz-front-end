@@ -35,27 +35,6 @@ function App() {
       {/* </div> */}
     </Router>
 
-      <Routes>
-        <Route path="/" element={
-          <div>
-            <PlayButtonGroup />
-            <HomeLeaderboard />
-          </div>
-        } />
-        <Route path="/login" element={
-          <Login />
-        } />
-        <Route path="/register" element={
-          <Register />
-        } />
-      </Routes>
-      </div>
-      <HomeLeaderboard />
-      
-    </div>
-    </Router>
-    
-
   );
 }
 
