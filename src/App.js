@@ -4,9 +4,6 @@ import PlayButtonGroup from './components/PlayButtonGroup'
 import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import HomeLeaderboard from './components/HomeLeaderboard'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Register from './components/Register'
 import Login from './components/Login'
 
