@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={
           <div>
             <PlayButtonGroup />
-            <HomeLeaderboard />
+            <Footer />
           </div>
         } />
         <Route path="/login" element={
@@ -30,24 +30,7 @@ function App() {
             <Questions />
         } />
       </Routes>
-        <Routes>
-          <Route path="/" element={
-            <div>
-              <PlayButtonGroup />
-              <Footer />
-            </div>
-          } />
-          <Route path="/login" element={
-            <Login />
-          } />
-          <Route path="/register" element={
-            <Register />
-          } />
-        </Routes>
       </div>
-      <Footer />
-
-      {/* </div> */}
     </Router>
 
   );
