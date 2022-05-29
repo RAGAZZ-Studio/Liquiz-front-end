@@ -1,4 +1,5 @@
 .myBg {
+  height: 100vh;
   height: 130vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/img/bg1.png");
@@ -84,7 +85,6 @@
   top: 888px;
   background: #ffffff;
   border-radius: 70px;
-  z-index:99;
 }
 
 .form {
@@ -217,4 +217,45 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+.footer {
+  width:100%;
+  background-color:#131314;
+  height: 280px;
+  position: absolute;
+  top:850px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  color : #fff;
+  font-family: 'inter';
+  font-style: 'normal';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.footerCont{
+  margin-top: 77px;
+  border-radius: 20px;
+}
+
+.colFooter {
+  margin-left: 150px;
+  margin-top:45px;
+}
+
+.colFooterR {
+  margin-left: 100px;
+}
+
+.closingFooter {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background-color: #131314;
+  top:260px;
 }
