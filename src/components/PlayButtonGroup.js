@@ -7,8 +7,8 @@ const PlayButtonGroup = () => {
   return (
     <Container>
           <div className="playButtonGroup d-flex justify-content-center">
-            <button type="button" className='rect2 playText justify-content-center'>
-              PLAY
+            <button type="button" className='rect2 justify-content-center'>
+              <a className="playText" href="/play">PLAY</a>
             </button>
             <Image
               src={hand}

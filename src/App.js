@@ -27,7 +27,7 @@ function App() {
           <Register />
         } />
         <Route path="/play" element={
-            <Questions />
+          <Questions />
         } />
       </Routes>
       </div>
