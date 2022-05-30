@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
 function Questions() {
-    const questions = [
+	const Token = localStorage.getItem('token')
+
+	const questions = [
 		{
 			questionText: 'What is the correct spelling for more than one wolf?',
 			answerOptions: [
@@ -38,7 +40,7 @@ function Questions() {
 				{ answerText: 'Worst', isCorrect: true },
 			],
 		},
-        {
+		{
 			questionText: '"Do not play on the pool while it is raining!"\n The statement above is a ... sentence.',
 			answerOptions: [
 				{ answerText: 'Interogative', isCorrect: false },
@@ -65,29 +67,35 @@ function Questions() {
 			setShowScore(true);
 		}
 	};
-	return (
-		<div className='play'>
-			{showScore ? (
-				<div className='score-section'>
-					Kamu benar {score} pertanyaan dari {questions.length} pertanyaan.
-				</div>
-			) : (
-				<>
-					<div className='question-section'>
-						<div className='question-count'>
-							<span>Pertanyaan {currentQuestion + 1}</span>/{questions.length}
+	if (Token == null) {
+		alert("Silahkan masuk terlebih dahulu!")
+		window.location.href = "/login"
+	}
+	else {
+		return (
+			<div className='play'>
+				{showScore ? (
+					<div className='score-section'>
+						Kamu benar {score} pertanyaan dari {questions.length} pertanyaan.
+					</div>
+				) : (
+					<>
+						<div className='question-section'>
+							<div className='question-count'>
+								<span>Pertanyaan {currentQuestion + 1}</span>/{questions.length}
+							</div>
+							<div className='question-text'>{questions[currentQuestion].questionText}</div>
 						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-					</div>
-					<div className='answer-section'>
-						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
-					</div>
-				</>
-			)}
-		</div>
-	);
+						<div className='answer-section'>
+							{questions[currentQuestion].answerOptions.map((answerOption) => (
+								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							))}
+						</div>
+					</>
+				)}
+			</div>
+		);
+	}
 }
 
 export default Questions

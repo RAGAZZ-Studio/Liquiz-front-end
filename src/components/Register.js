@@ -24,6 +24,8 @@ function Register() {
         axios.post("https://liquiz-backend.herokuapp.com/api/register", userData).then((response) => {
           console.log(response.status);
           console.log(response.data);
+          alert("Pendaftaran Berhasil! Silahkan masuk.")
+          window.location.href = "/login"
         });
       };
 

@@ -22,9 +22,9 @@ const Footer = () => {
           </Col>
           <Col className="colFooter">
             <br></br>
-            Home<br></br>
-            Leaderboard<br></br>
-            Coinshop<br></br>
+            <a href='/'>Home</a><br></br>
+            <a href='/leaderboard'>Leaderboard</a><br></br>
+            <a href='/shop'>Coin Shop</a><br></br>
           </Col>
         </Row>
       </Container>

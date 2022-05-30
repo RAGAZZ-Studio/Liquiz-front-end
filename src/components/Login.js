@@ -19,12 +19,16 @@ function Login() {
     e.preventDefault();
     const userData = {
       username: user.username,
-      password: user.password
+      password: user.password,
     };
     axios.post("https://liquiz-backend.herokuapp.com/api/login", userData)
       .then((response) => {
         console.log(response.status);
         console.log(response.data.token);
+        localStorage.setItem('username', user.username);
+        localStorage.setItem('token', response.data.token);
+        alert("Selamat datang di Liquiz!")
+        window.location.href = "/"
       })
       .catch((error) => {
         if (error.response) {
@@ -45,10 +49,10 @@ function Login() {
           <Col className="justify-content-left">
             <div className='form'>
               <Image
-              src={logo}
-              height="110"
-              className="rounded loginLogo"
-              alt="Liquiz Logo"
+                src={logo}
+                height="110"
+                className="rounded loginLogo"
+                alt="Liquiz Logo"
               />
               <br></br>
               <h1 className="welcomeText">Welcome Back !!!</h1>
@@ -62,7 +66,7 @@ function Login() {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword" onChange={handleChange} value={user.password}>
                   <Form.Label className="labelLogin bsPrefix">Password</Form.Label>
-                  <Form.Control name="password" type="password"  className="formLogin" />
+                  <Form.Control name="password" type="password" className="formLogin" />
                 </Form.Group>
                 <div className='option ml-10'>Belum punya akun? Daftar <a href='/register'>disini.</a></div>
                 <br></br>
@@ -71,12 +75,12 @@ function Login() {
             </div>
           </Col>
           <Col>
-          <Image
+            <Image
               src={loginImage}
               height="800"
               className="rounded mt-100"
               alt="Login Image"
-              />
+            />
           </Col>
         </Row>
       </Card>
