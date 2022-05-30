@@ -1,3 +1,59 @@
-.card-group{
-    background-color: rgb(109, 106, 102);
+.card-group {
+  background-color: rgb(109, 106, 102);
+}
+
+.shopCard {
+  width: 336px;
+  height: 412px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.coinCard {
+  width: 336px;
+  height: 412px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  font-family: "Itim";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.coinimg {
+  width: 193px;
+  height: 228px;
+}
+
+.coinButton {
+  width: 261px;
+  height: 68px;
+
+  background: #e40066;
+  border-radius: 15px;
+  font-family: "Itim";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  border:#e40066;
+  color: #ffe1e1;
+}
+
+.coinButton:hover {
+    background: #fdd329;
+    color: #e40066;
+    transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+    -ms-transition: ease-in-out 0.5s;
+    -o-transition: ease-in-out 0.5s;
 }
