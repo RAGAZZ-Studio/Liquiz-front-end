@@ -25,7 +25,6 @@ function Login() {
       .then((response) => {
         console.log(response.status);
         console.log(response.data.token);
-        localStorage.setItem('username', user.username);
         localStorage.setItem('token', response.data.token);
         alert("Selamat datang di Liquiz!")
         window.location.href = "/"
