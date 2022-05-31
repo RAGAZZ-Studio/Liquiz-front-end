@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import '../style/quiz.css'
+import cat from '../assets/img/confused-confusing.gif'
+import {Image} from 'react-bootstrap'
+import congrats from '../assets/img/congratulations.gif'
 
 function Questions() {
 	const Token = localStorage.getItem('token')
@@ -77,18 +81,20 @@ function Questions() {
 				{showScore ? (
 					<div className='score-section'>
 						Kamu benar {score} pertanyaan dari {questions.length} pertanyaan.
+						<Image className="minion" src={congrats} height="300" />
 					</div>
 				) : (
 					<>
 						<div className='question-section'>
 							<div className='question-count'>
-								<span>Pertanyaan {currentQuestion + 1}</span>/{questions.length}
+								<span>Question  {currentQuestion + 1}</span>
 							</div>
-							<div className='question-text'>{questions[currentQuestion].questionText}</div>
+							<Image rounded src={cat} />
 						</div>
 						<div className='answer-section'>
+								<div className='question-text'>{questions[currentQuestion].questionText}</div>
 							{questions[currentQuestion].answerOptions.map((answerOption) => (
-								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+								<button className="answer" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 							))}
 						</div>
 					</>

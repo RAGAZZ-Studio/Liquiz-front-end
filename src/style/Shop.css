@@ -57,3 +57,11 @@
     -ms-transition: ease-in-out 0.5s;
     -o-transition: ease-in-out 0.5s;
 }
+
+.myBg {
+  height: 100vh;
+  height: 200vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/img/bg1.png");
+  background-size: cover;
+}

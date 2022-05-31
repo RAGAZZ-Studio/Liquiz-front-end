@@ -1,0 +1,63 @@
+.profile{
+  background: #ffffff;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 46px;
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.25);
+  color: #000000;
+}
+
+.profileInfo {
+  font-size:25px;
+  font-weight:450;
+}
+
+.profileHead{
+  background: #e40066;
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
+  border-radius:35px;
+  -webkit-border-radius:35px;
+  -moz-border-radius:35px;
+  -ms-border-radius:35px;
+  -o-border-radius:35px;
+}
+
+.avatarTittle {
+  text-align:center;
+  font-size:50px;
+  font-weight:600;
+  color:#e40066;
+}
+
+.cardAvatar{
+  border-radius:35px;
+  -webkit-border-radius:35px;
+  -moz-border-radius:35px;
+  -ms-border-radius:35px;
+  -o-border-radius:35px;
+}
+
+.profileCard{
+  background:#e40066;
+  color:#fff;
+  border-radius:20px;
+}
+
+.profileCard:hover {
+  background: #FFF;
+  color:#e40066;
+}
+
+.profileTittle{
+  font-size:50px;
+  font-weight:600;
+}

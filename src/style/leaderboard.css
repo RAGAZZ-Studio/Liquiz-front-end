@@ -1,5 +1,32 @@
-.leadeboard {
-    display: flex;
-    justify-content:baseline;
-    text-align: center;
+.tableLeaderboard {
+  background: #ffffff;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 46px;
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.25);
+  color: #000000;
 }
+
+.no1Text {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.no1row {
+  background: #e40066;
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.invimage{
+    opacity: 0%;
+}
+
